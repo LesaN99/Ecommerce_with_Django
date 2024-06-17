@@ -1,6 +1,9 @@
 from django.shortcuts import get_object_or_404, render
 from .models import Product, Customer
 
+def home(request):
+    return render(request, 'Ecommerce/home.html')
+
 def product_list(request):
     products = Product.objects.all()
     context = {
